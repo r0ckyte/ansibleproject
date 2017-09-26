@@ -1,0 +1,24 @@
+---
+- name: Converge
+  hosts: all
+  become: True
+  tasks:
+    - name: Group_vars from existing directory from molecule.yml
+      command: echo "{{ host_group_vars_example1 }}"
+      changed_when: False
+    - name: Group_vars from exisintg
+      command: echo "{{ host_group_vars_example2  }}" 
+      changed_when: False
+- hosts: all
+  tasks:
+    - name: dummy conver of ex
+      command: /bin/true
+      changed_when: False
+   
+#- hosts: all
+  
+#  roles:
+#    - samba
+#    - scrapy                              
+#    - lb
+#    - common 
