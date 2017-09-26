@@ -9,7 +9,7 @@ node() {
             sh 'molecule lint'
         }
         stage ("Executing Molecule create") {
-            sh 'molecule create'
+            sh 'sudo molecule create'
         }
         stage ("Executing Molecule converge") {
             sh 'molecule converge'
