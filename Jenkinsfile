@@ -27,8 +27,8 @@ node() {
                 if [[ $(git tag | grep "^${$COMMIT_ID}$" | wc -l) -eq 1 ]]
                     then    echo "Tag already exists"
                     else    echo "Tag will be created"
-                            git config user.name "jenkins"
-                            git config user.email "jenkins@localhost"
+                            git config user.name "r0ckyte"
+                            git config user.email "r0ckyte@localhost"
                             git tag -a $COMMIT_ID -m "Added tagging"
                             git push --tags
                 fi
